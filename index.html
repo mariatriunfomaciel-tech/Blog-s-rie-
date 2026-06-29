@@ -1,41 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Blog</title>
-            <style>
-          header{ 
-          background-color: rgb(96, 149, 248);
-          color: aliceblue;
-          text-align: center;
-          max: width 800px;;
-          margin:0 auto;
-         padding: 16px;
-}
-       main {
-            background-color: cornflowerblue;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Stranger Things</title>
+    <style>
+        body {
+            background-color: #0f1115;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header { 
+            background-color: #e50914;
+            color: aliceblue;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        main {
+            background-color: #181a20;
             color: aliceblue; 
-          max: width 800px;;
-          margin:0 auto;
-          }
-         </style>
-    </head>
-    <body>
-        <header>
-           <h1>Meu Blog Serie</h1>
-            <p>Vou compartilhar algumas curiosidades e informações sobre a série Stranger things.</p>
-        </header>
-        <main>
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+        article {
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #e50914;
+        }
+        .autor {
+            font-style: italic;
+            color: #b3b3b3;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Blog Série</h1>
+        <p>Vou compartilhar algumas curiosidades e informações sobre a série Stranger Things.</p>
+    </header>
+    
+    <main>
+        <!-- Post 1 -->
+        <article>
+            <h2>Meu primeiro post</h2> 
+            <p class="autor">Por: Maria Eduarda</p>
+            <p>Boas-vindas ao meu novo blog! Aqui vou falar sobre curiosidades e informações sobre a série Stranger Things.</p> 
+        </article>
 
-                    <h2>Meu primeiro post</h2> 
-                    <p>Por: Maria Eduada</p>
-                    <p>Boas-vindas ao meu novo blog! aqui vou falar sobre 
-                curiosiades e informações sobre a série Stranger Things</p> 
-                            
-         </main>
+        <!-- Post 2 (Continuação) -->
+        <article>
+            <h2>Curiosidade #1: O Nome Original da Série</h2>
+            <p class="autor">Por: Maria Eduarda</p>
+            <p>Você sabia que Stranger Things não seria o nome original da produção? Inicialmente, a série se chamaria <strong>Montauk</strong>. A história se passaria em Long Island, Nova York, e teria uma pegada muito mais focada em teorias da conspiração reais do governo americano.</p>
+        </article>
+
+        <!-- Post 3 (Continuação) -->
+        <article>
+            <h2>Curiosidade #2: A Escolha do Elenco</h2>
+            <p class="autor">Por: Maria Eduarda</p>
+            <p>Os diretores (Irmãos Duffer) testaram mais de 900 meninos e 300 meninas para encontrar o elenco infantil principal. A escolha foi cirúrgica, e a química entre os atores mirins é um dos maiores pontos fortes do show desde a primeira temporada.</p>
+        </article>
+    </main>
 </body>
- </html>
-
- 
+</html>
