@@ -5,42 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Stranger Things</title>
     <style>
-        body {
-            background-color: #0f1115;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        header { 
-            background-color: #e50914;
-            color: aliceblue;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 8px 8px 0 0;
-        }
-        main {
-            background-color: #181a20;
-            color: aliceblue; 
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 0 0 8px 8px;
-        }
-        article {
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #e50914;
-        }
-        .autor {
-            font-style: italic;
-            color: #b3b3b3;
-            font-size: 0.9em;
-        }
+        /* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #e50914;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #e50914;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.7), 0 0 20px rgba(229, 9, 20, 0.5);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #aaaaaa;
+}
+
+/* Layout Principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilização dos Posts (Articles) */
+article {
+    background-color: #181818;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-4px);
+    border-color: #e50914;
+}
+
+article h2 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.autor {
+    font-size: 0.85rem;
+    color: #e50914;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+article p {
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+article strong {
+    color: #ffffff;
+}
     </style>
 </head>
 <body>
