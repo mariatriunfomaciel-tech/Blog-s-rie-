@@ -1,38 +1,205 @@
+Aqui está o código completo **junto em um único arquivo** (`index.html`).
+
+Para fazer isso, colocamos o CSS dentro da tag `<style>` no `<head>` e o JavaScript dentro da tag `<script>` antes do fechamento do `</body>`. Basta salvar todo o bloco abaixo como `index.html` e abrir no seu navegador!
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Stranger Things</title>
-   <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* --- RESET E SINTAXE CORRIGIDA --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- VARIÁVEIS DE CORES (TEMAS) --- */
+        /* Tema Claro */
+        :root {
+            --bg-color: #f4f4f9;
+            --card-bg: #ffffff;
+            --text-color: #222222;
+            --text-muted: #555555;
+            --primary-red: #e50914;
+            --border-color: #dddddd;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tema Escuro */
+        body.dark-theme {
+            --bg-color: #0d0d0d;
+            --card-bg: #181818;
+            --text-color: #e0e0e0;
+            --text-muted: #aaaaaa;
+            --border-color: #2a2a2a;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        /* --- ESTILOS GERAIS --- */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 3px solid var(--primary-red);
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* Botão de Alternar Tema */
+        .theme-toggle {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--primary-red);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--primary-red);
+            color: #ffffff;
+        }
+
+        /* --- LAYOUT E DISPOSIÇÃO DAS POSTAGENS --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+        }
+
+        .post {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-red);
+        }
+
+        .post h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .autor {
+            font-size: 0.85rem;
+            color: var(--primary-red);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .post p {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        .post strong {
+            color: var(--primary-red);
+        }
+    </style>
 </head>
-<body>
+<body class="dark-theme">
+
     <header>
-        <h1>Meu Blog Série</h1>
-        <p>Vou compartilhar algumas curiosidades e informações sobre a série Stranger Things.</p>
+        <div class="header-container">
+            <h1>Blog Stranger Things</h1>
+            <p>Curiosidades e teorias sobre o Mundo Invertido.</p>
+            <button id="theme-btn" class="theme-toggle">☀️ Tema Claro</button>
+        </div>
     </header>
     
-    <main>
-        <!-- Post 1 -->
-        <article>
-            <h2>Meu primeiro post</h2> 
+    <main class="container">
+        <article class="post">
+            <h2>Boas-vindas ao Blog!</h2> 
             <p class="autor">Por: Maria Eduarda</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou falar sobre curiosidades e informações sobre a série Stranger Things.</p> 
+            <p>Boas-vindas ao meu novo blog! Aqui vou falar sobre curiosidades, bastidores e informações sobre a série Stranger Things.</p> 
         </article>
 
-        <!-- Post 2 (Continuação) -->
-        <article>
+        <article class="post">
             <h2>Curiosidade #1: O Nome Original da Série</h2>
             <p class="autor">Por: Maria Eduarda</p>
             <p>Você sabia que Stranger Things não seria o nome original da produção? Inicialmente, a série se chamaria <strong>Montauk</strong>. A história se passaria em Long Island, Nova York, e teria uma pegada muito mais focada em teorias da conspiração reais do governo americano.</p>
         </article>
 
-        <!-- Post 3 (Continuação) -->
-        <article>
+        <article class="post">
             <h2>Curiosidade #2: A Escolha do Elenco</h2>
             <p class="autor">Por: Maria Eduarda</p>
-            <p>Os diretores (Irmãos Duffer) testaram mais de 900 meninos e 300 meninas para encontrar o elenco infantil principal. A escolha foi cirúrgica, e a química entre os atores mirins é um dos maiores pontos fortes do show desde a primeira temporada.</p>
+            <p>Os diretores (Irmãos Duffer) testaram mais de 900 meninos e 300 meninas para encontrar o elenco infantil principal. A escolha foi cirúrgica, e a química entre os atores mirins é um dos maiores pontos fortes do show.</p>
+        </article>
+
+        <article class="post">
+            <h2>Curiosidade #3: O Som do Demogorgon</h2>
+            <p class="autor">Por: Maria Eduarda</p>
+            <p>Os efeitos sonoros do Demogorgon foram criados usando uma mistura bizarra de sons da natureza: ruídos de focas, focas-marinhas e até o som de um sapato rangendo em uma folha de papel!</p>
+        </article>
+
+        <article class="post">
+            <h2>Curiosidade #4: Referências aos Anos 80</h2>
+            <p class="autor">Por: Maria Eduarda</p>
+            <p>A série é uma grande homenagem aos clássicos do cinema dos anos 1980, com influências claras de diretores como <strong>Steven Spielberg</strong>, <strong>John Carpenter</strong> e o autor <strong>Stephen King</strong>.</p>
         </article>
     </main>
+
+    <script>
+        const themeBtn = document.getElementById('theme-btn');
+        const body = document.body;
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+
+            if (body.classList.contains('dark-theme')) {
+                themeBtn.textContent = '☀️ Tema Claro';
+            } else {
+                themeBtn.textContent = '🌙 Tema Escuro';
+            }
+        });
+    </script>
 </body>
 </html>
+
+```
